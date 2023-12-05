@@ -11,16 +11,25 @@ body {
     align-items: flex-start;
 }
 
+.left-container {
+    margin-left: 20%
+
+}
+
 #label1 {
     margin-top:5%;
     font-size: 1.2em;
     font-weight: bold;
+    /* background-color: #4caf50;
+    width: 16%; */
 }
 
 #label2 {
     margin-top:3%;
     font-size: 1.2em;
     font-weight: bold;
+    /* background-color: #4caf50;
+    width: 16% */
 }
 
 #question {
@@ -54,6 +63,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
     margin-right: 2%;
+    width: 7%;
 }
 
 #button2 {
@@ -64,4 +74,5 @@ body {
     border-radius: 4px;
     cursor: pointer;
     margin-left: 2%;
+    width: 7%;
 }

@@ -111,3 +111,13 @@ def chat(request):
     }
 
     return render(request, 'languagechat/result.html', context)  
+
+
+def result_test(request):
+    
+    context = {
+        'question': 'hello',
+        'result': 'answer test'
+    }
+    
+    return render(request, 'languagechat/result.html', context)
