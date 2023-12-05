@@ -1,0 +1,9 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#question{
+    width: 60%;
+}
