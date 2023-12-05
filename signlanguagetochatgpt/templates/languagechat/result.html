@@ -11,7 +11,7 @@
 
       <div class= "left-container">
           <div id ='label1'>
-            <label>Request to chatgpt</label>
+            <label>You</label>
           </div>
       </div>
       <br>
@@ -28,10 +28,16 @@
       <br>
 
       <div class= "center-container">
-        <textarea id="result" name="result">{{result}}</textarea>
+        <textarea id="result" name="result" readonly>{{result}}</textarea>
           <!--<span id="result">{{result}}</span> -->
       </div>  
-      <br><br>
+      <br>
+
+      {% comment %} <div class="button-container">
+        <input type="text" id="message" name="message" placeholder="Message ChatGPT...">
+        <button id="newMessage">Click me</button>
+      </div> {% endcomment %}
+    
       <div class= "center-container">
           <button id='button1' onclick='#'>Try agian</button>
           <button id='button2' onclick='#'>Go main</button>
