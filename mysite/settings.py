@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'signlanguagetochatgpt',
     'selfchatgpt',
     'selfsignlanguagetochatgpt',
+    'login',
     'bootstrap4'
 ]
 
@@ -127,6 +128,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
 
 
 # Default primary key field type

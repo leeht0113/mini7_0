@@ -1,14 +1,47 @@
+{% load bootstrap4 %}
 {% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 <link rel="stylesheet" href="{% static 'languagechat/chat_style.css' %}">
 <div class="one-box">
 <form action="chat" method="post" entype="application/x-www-form-urlencoded">
-    {% csrf_token %}
-    <div id="file-module-0">
-        <label>chatgtp에게 요청하기</label>
-        <textarea id="question" name="question">{{question}}</textarea>
-    </div>
-    <div>
-      <label>응답</label>
-      <span id="result">{{result}}</span>
+  {% csrf_token %}
+
+  <div id="file-module-0">
+
+      <div class= "left-container">
+          <div id ='label1'>
+            <label>You</label>
+          </div>
+      </div>
+      <br>
+
+      <div class= "center-container">
+          <textarea id="question" name="question">{{question}}</textarea>
+      </div>
+
+      <div class='left-container'>
+          <div id ='label2'>
+            <label>Answer from chatgpt</label>
+          </div>
+      </div>
+      <br>
+
+      <div class= "center-container">
+        <textarea id="result" name="result" readonly>{{result}}</textarea>
+          <!--<span id="result">{{result}}</span> -->
+      </div>  
+      <br>
+
+      {% comment %} <div class="button-container">
+        <input type="text" id="message" name="message" placeholder="Message ChatGPT...">
+        <button id="newMessage">Click me</button>
+      </div> {% endcomment %}
+    
+      <div class= "center-container">
+          <button id='button1' onclick='#'>Try agian</button>
+          <button id='button2' onclick='#'>Go main</button>
+      </div>  
   </div>
+
 </form>

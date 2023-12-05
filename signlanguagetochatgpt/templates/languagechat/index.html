@@ -21,7 +21,7 @@
       // 복사된 Node id 변경하기
       idNum++;
       newNode.id = 'file-module-' + idNum;
-
+        
       // 복사한 노드 붙여넣기
       fileModule.after(newNode);
     }
@@ -36,6 +36,8 @@
 
         </fieldset>
     </span>
-    <button onclick="addFile()" type="button">파일 추가 </button>
-    <div><input type="submit" value="ChatGPT에게 수어로 문의하기"></div>
+    <button onclick="addFile()" type="button" style="width: 100%;">파일 추가 </button>
+    <div style="width: 100%;">
+        <input type="submit" value="ChatGPT에게 수어로 문의하기" style="width: 100%;">
+    </div>
 </form>
