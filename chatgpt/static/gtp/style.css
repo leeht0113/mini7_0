@@ -1,0 +1,27 @@
+h2 .badge.bg-success {
+    text-align: center;
+    font-size: 20px;
+    background-color: #719E71;
+    color: #ffffff;
+  }
+
+h2 .badge.bg-warning {
+    text-align: center;
+    font-size: 20px;
+    background-color: #719E71;
+    color: #ffffff;
+  }
+
+  #text-button {
+    background-color: transparent;
+    color: #545c64;
+  }
+  
+#text-button:hover {
+    background-color: transparent; 
+    color: #545c64;
+  }
+
+div .mb-3 {
+    text-align: center;
+  }
