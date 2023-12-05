@@ -36,13 +36,12 @@ body {
         width: 60%; 
         height: 100px; 
         border: 1px solid #ccc; 
+        border-radius: 4px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
         padding: 10px; 
         resize: both;  /* 크기 조절 */
         overflow: auto;  /* 스크롤바 */
-
         transition: border-color 0.3s ease-in-out; 
-
     
     &:hover {
         border-color: #3498db;
@@ -52,7 +51,18 @@ body {
 
 #result {
     width: 60%; 
-    height: 200px; 
+    height: 200px;
+    border: 1px solid #ccc; 
+        border-radius: 4px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+        padding: 10px; 
+        resize: both;  /* 크기 조절 */
+        overflow: auto;  /* 스크롤바 */
+        transition: border-color 0.3s ease-in-out; 
+        
+    &:hover {
+        border-color: #3498db;
+    }
 }
 
 #button1 {
