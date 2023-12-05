@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from openai import OpenAI
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 # Create your views here.
 
 
@@ -24,7 +24,7 @@ def imageGPT(prompt):
     return result
 
 def index(request):
-    return render(request, 'gpt/index.html')
+    return render(request, 'login/index.html')
 
 def chat(request):
     #post로 받은 question
@@ -39,4 +39,4 @@ def chat(request):
         'result': result
     }
 
-    return render(request, 'gpt/result.html', context) 
+    return render(request, 'login/result.html', context) 
