@@ -1,28 +1,41 @@
+{% load bootstrap4 %}
 {% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 <link rel="stylesheet" href="{% static 'languagechat/chat_style.css' %}">
 <div class="one-box">
 <form action="chat" method="post" entype="application/x-www-form-urlencoded">
   {% csrf_token %}
 
   <div id="file-module-0">
-  
-      <div class= "center-container">
-          <label>chatgtp에게 요청하기</label>
+
+      <div class= "left-container">
+          <div id ='label1'>
+            <label>Request to chatgpt</label>
+          </div>
       </div>
       <br>
 
       <div class= "center-container">
-      <textarea id="question" name="question">{{question}}</textarea>
+          <textarea id="question" name="question">{{question}}</textarea>
+      </div>
+
+      <div class='left-container'>
+          <div id ='label2'>
+            <label>Answer from chatgpt</label>
+          </div>
       </div>
       <br>
 
-      <div class='center-container'>
-        <label>응답</label>
-        <span id="result">{{result}}</span>
-      </div>
-      
-      <br>
-
+      <div class= "center-container">
+        <textarea id="result" name="result">{{result}}</textarea>
+          <!--<span id="result">{{result}}</span> -->
+      </div>  
+      <br><br>
+      <div class= "center-container">
+          <button id='button1' onclick='#'>Try agian</button>
+          <button id='button2' onclick='#'>Go main</button>
+      </div>  
   </div>
-  
+
 </form>
