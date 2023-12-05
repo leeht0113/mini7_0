@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>{% block title %}Snapshot by TEMPLATED{% endblock %}</title>
+</head>
+<body>
+    <div class="page-wrap">
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="{% url 'main' %}" class="{% block home_active %}active{% endblock %}"><span class="icon fa-home"></span></a></li>
+                <li><a href=#><span class="icon fa-file-text-o"></span></a></li>
+                <li><a href="/chatgpt/"><span class="icon fa-file-text-o"></span></a></li>
+                <li><a href="/signlanguagetochatgpt/"><span class="icon fa-camera-retro"></span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="content-wrap">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!-- Footer -->
+        <div class="copyright">
+            Design by: <a href="https://templated.co/">TEMPLATED.CO</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.poptrox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'js/skel.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

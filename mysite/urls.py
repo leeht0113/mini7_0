@@ -17,9 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import render
+from django.conf import settings
+from django.conf.urls.static import static
 
 def index(request):
     return render(request,'index.html')
+<<<<<<< HEAD
+
+def main(request):
+    return render(request, 'home.html')
+=======
+>>>>>>> 8c2dd2810bf34502d1eb688df1985c42261472c9
 
 urlpatterns = [
     path('',index),
@@ -28,8 +36,13 @@ urlpatterns = [
     path('signlanguagetochatgpt/',include('signlanguagetochatgpt.urls')),
     path('selfchatgpt/', include('selfchatgpt.urls')),
     path('selfsignlanguagetochatgpt/', include('selfsignlanguagetochatgpt.urls')),
+<<<<<<< HEAD
+    path('main/', main, name='main'),  # Add this line for the "main" page
+=======
     path('login/', include('login.urls'))
+>>>>>>> 8c2dd2810bf34502d1eb688df1985c42261472c9
 ]
+
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -37,3 +50,4 @@ from django.conf.urls.static import static
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
