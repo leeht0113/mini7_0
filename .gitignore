@@ -14,3 +14,6 @@ db.sqlite3
 
 # api_key 깃허브 업로드 방지
 api_key.txt
+
+# local에서 테스트 하는 png 파일 업데이트 방지
+*.png
