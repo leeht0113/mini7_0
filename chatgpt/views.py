@@ -35,6 +35,9 @@ def imageGPT(prompt):
 def index(request):
     return render(request, 'gpt/index.html')
 
+def index_hj(request):
+    return render(request, 'gpt/index_hj.html')
+
 def chat(request):
     #post로 받은 question
     prompt = request.POST.get('question')
@@ -58,3 +61,5 @@ def result_test(request):
     }
    
     return render(request, 'gpt/result.html', context)
+
+
