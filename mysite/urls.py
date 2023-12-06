@@ -21,15 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 def index(request):
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return render(request,'index.html')
-=======
-=======
-
->>>>>>> 47016c2a73fd56619cc84c35848e3b97fbc7e15a
     return render(request,'home.html')
->>>>>>> fdfe82d0dcd20ed4905cc70d8804be5283b0d78f
 
 def main(request):
     return render(request, 'home.html')
