@@ -121,3 +121,18 @@ def result_test(request):
     }
     
     return render(request, 'languagechat/result.html', context)
+
+def chat2(request):
+    #post로 받은 question
+    prompt = request.POST.get('question')
+
+
+    #type가 text면 chatGPT에게 채팅 요청 , type가 image면 imageGPT에게 채팅 요청
+    result = chatGPT(prompt)
+
+    context = {
+        'question': prompt,
+        'result': result
+    }
+
+    return render(request, 'languagechat/result.html', context) 
