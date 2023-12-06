@@ -21,7 +21,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 def index(request):
+<<<<<<< HEAD
     return render(request,'index.html')
+=======
+<<<<<<< HEAD
+    return render(request,'home.html')
+=======
+    return render(request,'index.html')
+>>>>>>> 0e78c6c74be455270df402978d66a6653c678a57
+>>>>>>> 028baa740c65b6527f5f47b1e69a130562f4b1eb
 
 def main(request):
     return render(request, 'home.html')
@@ -35,6 +43,13 @@ urlpatterns = [
     path('selfsignlanguagetochatgpt/', include('selfsignlanguagetochatgpt.urls')),
     path('main/', main, name='main'),  # Add this line for the "main" page
     path('login/', include('login.urls'))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0e78c6c74be455270df402978d66a6653c678a57
+>>>>>>> 028baa740c65b6527f5f47b1e69a130562f4b1eb
 ]
 
 

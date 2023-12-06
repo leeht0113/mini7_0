@@ -1,4 +1,13 @@
 
 .DS_Store
 
+# 파이썬 캐시 파일
+__pycache__/
+
+# 개발 환경 설정 파일
 *.pyc
+*.pyo
+*.pyd
+
+# 장고 관리자 페이지 설정 파일
+db.sqlite3
