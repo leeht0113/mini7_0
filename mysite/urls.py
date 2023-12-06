@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 def index(request):
     return render(request,'index.html')
 
+
 def main(request):
     return render(request, 'home.html')
 

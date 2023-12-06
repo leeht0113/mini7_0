@@ -2,7 +2,10 @@ from django.shortcuts import render
 from openai import OpenAI
 import os
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0687bf9469de3ff4eac6ef6db127cb24b371d59e
 api_path = './api_key.txt'
 def read_api_key(file_path=api_path):
     try:
@@ -15,9 +18,12 @@ def read_api_key(file_path=api_path):
 txt_api_key = read_api_key()
 
 client = OpenAI(api_key=txt_api_key)
+<<<<<<< HEAD
 # Create your views here.
 
 
+=======
+>>>>>>> 0687bf9469de3ff4eac6ef6db127cb24b371d59e
 
 #chatGPT에게 채팅 요청 API
 def chatGPT(prompt):
@@ -52,3 +58,12 @@ def chat(request):
     }
 
     return render(request, 'gpt/result.html', context) 
+
+def result_test(request):
+   
+    context = {
+        'question': 'hello',
+        'result': 'answer test'
+    }
+   
+    return render(request, 'gpt/result.html', context)
