@@ -1,9 +1,3 @@
-h2 {
-    background-color: transparent;
-    text-align: center;
-  }
-  
-
 h2 .badge.bg-success {
     font-size: 20px;
     color: #545c64;
@@ -18,11 +12,13 @@ div .form-control {
 }
 
 #text-button {
-    background-color: transparent;
-    color: #545c64;
-  }
+  background-color: transparent;
+  color: #545c64;
+  border: 2px solid #545c64; 
+}
   
 #text-button:hover {
-    background-color: transparent; 
-    color: #545c64;
-  }
+  background-color: transparent;
+  color: #545c64;
+  border: 2px solid #545c64; 
+}
