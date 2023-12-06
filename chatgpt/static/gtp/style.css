@@ -1,41 +1,50 @@
 h2 .badge {
-    text-align: center;
-    font-size: 20px;
-    color: #ffffff;
-  }
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+}
 
 h2 .badge.bg-warning {
-    text-align: center;
-    font-size: 20px;
-    background-color: #719E71;
-    color: #ffffff;
-  }
+  text-align: center;
+  font-size: 20px;
+  background-color: #719E71;
+  color: #ffffff;
+}
 
 #text-button {
+<<<<<<< HEAD
     background-color: transparent;
     color: #ffffff;
     border: 2px solid #ffffff; 
     width: 1100px;
   }
     
+=======
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  width: 1100px;
+}
+ 
+>>>>>>> c7f4da96f5df4f36ae6d1a044f1d0e1d32333c50
 #text-button:hover {
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff; 
-  }
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
 
 div .mb-3 {
-    text-align: center;
-  }
+  text-align: center;
+}
 
 body {
-    background-image: url('https://i.pinimg.com/originals/ba/92/1f/ba921f7e877f7a245a4b2dc8264e3502.jpg');
-    background-size: cover; /* 배경 이미지를 창에 맞게 조절 */
-    background-position: center; /* 배경 이미지를 가운데 정렬 */
-    height: 100vh; /* 화면 전체 높이에 배경 적용 */
-    margin: 0;
-  }
+  background-image: url('https://i.pinimg.com/originals/ba/92/1f/ba921f7e877f7a245a4b2dc8264e3502.jpg');
+  background-size: cover; /* 배경 이미지를 창에 맞게 조절 */
+  background-position: center; /* 배경 이미지를 가운데 정렬 */
+  height: 100vh; /* 화면 전체 높이에 배경 적용 */
+  margin: 0;
+}
 
 nav {
-    background-color: #88888833;
-  }
+  background-color: #88888833;
+}

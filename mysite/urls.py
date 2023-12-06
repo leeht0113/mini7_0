@@ -22,24 +22,22 @@ from django.conf.urls.static import static
 
 def index(request):
     return render(request,'home.html')
+<<<<<<< HEAD
 
 
 
 def main(request):
     return render(request, 'home.html')
+=======
+>>>>>>> c7f4da96f5df4f36ae6d1a044f1d0e1d32333c50
 
 urlpatterns = [
     path('',index),
     path('admin/', admin.site.urls),
     path('chatgpt/',include('chatgpt.urls')),
     path('signlanguagetochatgpt/',include('signlanguagetochatgpt.urls')),
-    path('main/', main, name='main'),  # Add this line for the "main" page
     path('login/', include('login.urls'))
 ]
-
-
-from django.conf import settings
-from django.conf.urls.static import static
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

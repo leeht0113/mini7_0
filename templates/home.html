@@ -1,9 +1,6 @@
 <!-- home.html -->
 
 {% extends 'base.html' %}
-
-{% block title %}Team 11{% endblock %}
-
 {% load static %}
 
 {% block static %}  {# 정적 블록으로 수정 #}
@@ -11,10 +8,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 {% endblock %}
 
+{% block title %}Team 11{% endblock %}
 {% block content %}
-
-{% load static %}
-
 
     <!-- Your page content goes here -->
     <section id="main">
@@ -92,8 +87,6 @@
                         
                                 </fieldset>
                             </span>
-                            <input name="email" id="email" type="email" placeholder="Email"></div>
-
                             <button onclick="addFile()" type="button">파일 추가 </button>
                             <p></p>
                             <div><input href="/signlanguagetochatgpt/" type="submit" value="ChatGPT에게 수어로 문의하기"></div>
@@ -102,14 +95,5 @@
             </div>
     </section></section></div>
     
-
-        <!-- Scripts -->
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/jquery.poptrox.min.js' %}"></script>
-        <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-        <script src="{% static 'js/skel.min.js' %}"></script>
-        <script src="{% static 'js/util.js' %}"></script>
-        <script src="{% static 'js/main.js' %}"></script>
-
 
 {% endblock %}
