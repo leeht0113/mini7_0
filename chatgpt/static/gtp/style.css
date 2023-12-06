@@ -12,14 +12,16 @@ h2 .badge.bg-warning {
     color: #ffffff;
   }
 
-  #text-button {
+#text-button {
     background-color: transparent;
     color: #545c64;
+    border: 2px solid #545c64; 
   }
-  
+    
 #text-button:hover {
-    background-color: transparent; 
+    background-color: transparent;
     color: #545c64;
+    border: 2px solid #545c64; 
   }
 
 div .mb-3 {
