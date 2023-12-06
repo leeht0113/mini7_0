@@ -1,7 +1,19 @@
 from django.shortcuts import render
 from openai import OpenAI
+import os
 
-client = OpenAI(api_key="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")
+api_path = './api_key.txt'
+def read_api_key(file_path=api_path):
+    try:
+        with open(file_path, 'r') as file:
+            api_key = file.read().strip()
+        return api_key
+    except FileNotFoundError:
+        print(f"파일 '{file_path}'을 찾을 수 없습니다.")
+        return None
+txt_api_key = read_api_key()
+
+client = OpenAI(api_key=txt_api_key)
 # Create your views here.
 
 
