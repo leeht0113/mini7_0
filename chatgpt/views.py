@@ -14,9 +14,12 @@ def read_api_key(file_path=api_path):
 txt_api_key = read_api_key()
 
 client = OpenAI(api_key=txt_api_key)
+<<<<<<< HEAD
 # Create your views here.
 
 
+=======
+>>>>>>> 47016c2a73fd56619cc84c35848e3b97fbc7e15a
 
 
 #chatGPT에게 채팅 요청 API
