@@ -2,12 +2,12 @@
 {% load static %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
-{% block extrahead %}
+<title>{% block extrahead %}</title>
 {% endblock %}
 {% csrf_token %}
 <link rel="stylesheet" href="{% static '/gtp/style.css' %}">
+<body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-</nav>
   <div class="container-fluid">
     <a class="navbar-brand" href="/">MINI7</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,24 +24,15 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
       </ul>
     </div>
   </div>
 </nav>
-
-
+</nav>
+ 
+ 
 <div class="container mt-20 mb-4"></div>
-
+ 
 <form action="chat" method="post" entype="application/x-www-form-urlencoded">
   <div class="container">
     <div class="mb-3">
@@ -49,9 +40,9 @@
       <textarea class="form-control" id="question" name="question" rows="3">{{question}}</textarea>
     </div>
   </div>
-
+ 
   <div class="container mt-4 mb-4"></div>
-
+ 
   <div class='container'>
     <div class='mb-3'>
       <h2><span class="badge">응답</span></h2>
@@ -63,3 +54,4 @@
     </div>
   </div>
 </form>
+</body>
