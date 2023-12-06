@@ -19,6 +19,7 @@ client = OpenAI(api_key=txt_api_key)
 
 
 
+
 #chatGPT에게 채팅 요청 API
 def chatGPT(prompt):
     completion = client.chat.completions.create(model="gpt-3.5-turbo",
@@ -37,6 +38,9 @@ def imageGPT(prompt):
 
 def index(request):
     return render(request, 'gpt/index.html')
+
+def index_hj(request):
+    return render(request, 'gpt/index_hj.html')
 
 def chat(request):
     #post로 받은 question
@@ -61,3 +65,5 @@ def result_test(request):
     }
    
     return render(request, 'gpt/result.html', context)
+
+
