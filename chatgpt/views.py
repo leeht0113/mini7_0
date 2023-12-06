@@ -2,6 +2,7 @@ from django.shortcuts import render
 from openai import OpenAI
 import os
 
+
 api_path = './api_key.txt'
 def read_api_key(file_path=api_path):
     try:
@@ -14,6 +15,9 @@ def read_api_key(file_path=api_path):
 txt_api_key = read_api_key()
 
 client = OpenAI(api_key=txt_api_key)
+# Create your views here.
+
+
 
 
 #chatGPT에게 채팅 요청 API
