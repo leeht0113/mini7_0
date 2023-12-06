@@ -16,8 +16,6 @@ txt_api_key = read_api_key()
 client = OpenAI(api_key=txt_api_key)
 
 
-
-
 #chatGPT에게 채팅 요청 API
 def chatGPT(prompt):
     completion = client.chat.completions.create(model="gpt-3.5-turbo",
@@ -51,3 +49,12 @@ def chat(request):
     }
 
     return render(request, 'gpt/result.html', context) 
+
+def result_test(request):
+   
+    context = {
+        'question': 'hello',
+        'result': 'answer test'
+    }
+   
+    return render(request, 'gpt/result.html', context)
