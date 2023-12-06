@@ -40,8 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'chatgpt',
     'signlanguagetochatgpt',
-    'selfchatgpt',
-    'selfsignlanguagetochatgpt',
     'login',
     'bootstrap4'
 ]

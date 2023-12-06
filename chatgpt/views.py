@@ -16,7 +16,6 @@ txt_api_key = read_api_key()
 
 client = OpenAI(api_key=txt_api_key)
 
-# Create your views here.
 
 
 #chatGPT에게 채팅 요청 API
