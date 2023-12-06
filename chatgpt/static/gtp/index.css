@@ -1,6 +1,6 @@
 h2 .badge {
     font-size: 20px;
-    color: #545c64;
+    color: #ffffff;
   }
   
 div .mb-3 {
@@ -13,13 +13,32 @@ div .form-control {
 
 #text-button {
   background-color: transparent;
+<<<<<<< HEAD
   color: #545c64;
   border: 4px solid #545c64; 
+=======
+  color: #ffffff;
+  border: 2px solid #ffffff; 
+>>>>>>> 141b0d9056554fbb3ae0730485ade0b7414feaec
 }
   
 #text-button:hover {
   background-color: transparent;
-  color: #545c64;
-  border: 2px solid #545c64; 
+  color: #ffffff;
+  border: 2px solid #ffffff; 
 }
 
+<<<<<<< HEAD
+=======
+body {
+  background-image: url('https://i.pinimg.com/originals/ba/92/1f/ba921f7e877f7a245a4b2dc8264e3502.jpg');
+  background-size: cover; /* 배경 이미지를 창에 맞게 조절 */
+  background-position: center; /* 배경 이미지를 가운데 정렬 */
+  height: 100vh; /* 화면 전체 높이에 배경 적용 */
+  margin: 0;
+}
+
+nav {
+  background-color: #88888833;
+}
+>>>>>>> 141b0d9056554fbb3ae0730485ade0b7414feaec
