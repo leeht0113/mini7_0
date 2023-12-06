@@ -2,7 +2,7 @@ from django.shortcuts import render
 from openai import OpenAI
 
 client = OpenAI(api_key="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")
-# Create your views here.
+# Create your views here. # 
 
 
 
