@@ -3,8 +3,10 @@
 /* languagechat/style.css */
 
 body {
+    background-image: url('https://i.pinimg.com/originals/ba/92/1f/ba921f7e877f7a245a4b2dc8264e3502.jpg');
+    background-size: cover; /* 배경 이미지를 창에 맞게 조절 */
+    background-position: center; /* 배경 이미지를 가운데 정렬 */
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -16,7 +18,7 @@ form {
     max-width: 300px; /* 크기를 더 작게 조정 */
     width: 100%;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5); /* 알파 투명도 값: 0.5 */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
