@@ -4,7 +4,7 @@
 {% bootstrap_javascript %}
 <link rel="stylesheet" href="{% static 'languagechat/chat_style.css' %}">
 <div class="one-box">
-<form action="chat" method="post" entype="application/x-www-form-urlencoded">
+<form action="chat2" method="post" enctype="application/x-www-form-urlencoded">
   {% csrf_token %}
 
   <div id="file-module-0">
@@ -39,14 +39,15 @@
       </div> {% endcomment %}
     
       <div class= "center-container">
-          <button id='button1' type="button" class="btn btn-dark">Try agian</button>
-          <button id='button2' type="button" class="btn btn-dark">Go main</button>
+          <button id='button1' type="submit" class="btn btn-light">Try agian</button>
+          <a id='button2' class="btn btn-light" href="{% url 'signlanguagetochatgpt:index' %}">Go back</a>
       </div>  
   </div>
   <script>
     document.getElementById("button1").onclick = function() {
         // JavaScript를 사용하여 URL로 이동
         window.location.href = "{% url 'signlanguagetochatgpt:chat2' %}";
+        // document.forms[0].submit();
     };
 
     document.getElementById("button2").onclick = function() {
