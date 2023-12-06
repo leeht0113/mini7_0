@@ -39,9 +39,21 @@
       </div> {% endcomment %}
     
       <div class= "center-container">
-          <button id='button1' onclick='#'>Try agian</button>
-          <button id='button2' onclick='#'>Go main</button>
+          <button id='button1' type="button" class="btn btn-primary">Try agian</button>
+          <button id='button2' type="button" class="btn btn-primary">Go main</button>
       </div>  
   </div>
+  <script>
+    document.getElementById("button1").onclick = function() {
+        // JavaScript를 사용하여 URL로 이동
+        window.location.href = "{% url 'signlanguagetochatgpt:chat2' %}";
+    };
 
+    document.getElementById("button2").onclick = function() {
+      // JavaScript를 사용하여 URL로 이동
+      window.location.href = "{% url 'signlanguagetochatgpt:index' %}";
+  };
+</script>
 </form>
+
+

@@ -21,8 +21,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 def index(request):
-
     return render(request,'home.html')
+
 
 def main(request):
     return render(request, 'home.html')
