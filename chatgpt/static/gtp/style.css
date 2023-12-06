@@ -15,6 +15,7 @@ h2 .badge.bg-warning {
     background-color: transparent;
     color: #ffffff;
     border: 2px solid #ffffff; 
+    width: 1100px;
   }
     
 #text-button:hover {
