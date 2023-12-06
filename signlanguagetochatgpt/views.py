@@ -59,7 +59,6 @@ def chat(request):
             result.pub_date = timezone.datetime.now()
             result.save()
 
-
             # 흑백으로 읽기
             img = cv2.imread(result.image.path, cv2.IMREAD_GRAYSCALE)
 
