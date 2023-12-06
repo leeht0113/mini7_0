@@ -1,10 +1,20 @@
 from django.shortcuts import render
 from openai import OpenAI
-
-client = OpenAI(api_key="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")
-# Create your views here.
+import os
 
 
+api_path = './api_key.txt'
+def read_api_key(file_path=api_path):
+    try:
+        with open(file_path, 'r') as file:
+            api_key = file.read().strip()
+        return api_key
+    except FileNotFoundError:
+        print(f"파일 '{file_path}'을 찾을 수 없습니다.")
+        return None
+txt_api_key = read_api_key()
+
+client = OpenAI(api_key=txt_api_key)
 
 
 #chatGPT에게 채팅 요청 API

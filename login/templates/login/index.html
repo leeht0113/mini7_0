@@ -26,6 +26,11 @@
   }
   </style>
 <body >
+  <style>
+    nav {
+      background-color: #11111155;
+    }
+    </style>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">MINI7</a>
@@ -68,12 +73,24 @@
     background-position: center; /* 배경 이미지를 가운데 정렬 */
     height: 100vh; /* 화면 전체 높이에 배경 적용 */
     width: 120vh;
+    padding: 5vh;
     margin: 0;
   }
   </style>
-
+<style>
+  .image-container {
+    background-image: url('https://www.sisaweekly.com/news/photo/202003/31098_46736_828.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 200px; /* 이미지의 가로 크기 */
+    height: 300px; /* 이미지의 세로 크기 */
+    margin: 0 auto;
+    /* 다른 스타일링 옵션들을 필요에 따라 추가하세요. */
+}
+</style>
+<div class="image-container" position="center"></div>
 <div class="container">
-  <form>
+  <form action="/main/" method="POST">
     <div class="form-group">
       <label for="exampleInputEmail1">이메일</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -88,7 +105,8 @@
       <label class="form-check-label" for="exampleCheck1">로그인 정보 기억하기</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+</form>
+
   {% block content %}
   {% endblock %}
 </div>
