@@ -8,9 +8,12 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+# local에서 테스트 하는 png 파일 업데이트 방지
+*.png
 
 # 장고 관리자 페이지 설정 파일
 db.sqlite3
 
 # api_key 깃허브 업로드 방지
 api_key.txt
+
