@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from openai import OpenAI
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 # Create your views here.
 
 
@@ -40,3 +40,12 @@ def chat(request):
     }
 
     return render(request, 'gpt/result.html', context) 
+
+def result_test(request):
+   
+    context = {
+        'question': 'hello',
+        'result': 'answer test'
+    }
+   
+    return render(request, 'gpt/result.html', context)
