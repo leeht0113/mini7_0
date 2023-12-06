@@ -2,6 +2,7 @@ from django.shortcuts import render
 from openai import OpenAI
 import os
 
+
 api_path = './api_key.txt'
 def read_api_key(file_path=api_path):
     try:
