@@ -22,14 +22,6 @@ from django.conf.urls.static import static
 
 def index(request):
     return render(request,'home.html')
-<<<<<<< HEAD
-
-
-
-def main(request):
-    return render(request, 'home.html')
-=======
->>>>>>> c7f4da96f5df4f36ae6d1a044f1d0e1d32333c50
 
 urlpatterns = [
     path('',index),
