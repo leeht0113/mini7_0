@@ -12,21 +12,12 @@ h2 .badge.bg-warning {
 }
 
 #text-button {
-<<<<<<< HEAD
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff; 
-    width: 1100px;
-  }
-    
-=======
   background-color: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
   width: 1100px;
 }
  
->>>>>>> c7f4da96f5df4f36ae6d1a044f1d0e1d32333c50
 #text-button:hover {
   background-color: transparent;
   color: #ffffff;
@@ -48,3 +39,4 @@ body {
 nav {
   background-color: #88888833;
 }
+
