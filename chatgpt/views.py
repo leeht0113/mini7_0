@@ -14,7 +14,7 @@ def read_api_key(file_path=api_path):
         return None
 txt_api_key = read_api_key()
 
-client = OpenAI(api_key=txt_api_key)
+client = OpenAI(api_key='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')
 # Create your views here.
 
 
