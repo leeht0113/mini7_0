@@ -28,7 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('chatgpt/',include('chatgpt.urls')),
     path('signlanguagetochatgpt/',include('signlanguagetochatgpt.urls')),
-    path('login/', include('login.urls'))
+    path('login/', include('login.urls')),
 ]
 
 if settings.DEBUG:
