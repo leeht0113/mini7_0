@@ -37,3 +37,9 @@ body {
 nav {
   background-color: #88888833;
 }
+
+form {
+  position: absolute;
+  top: 28%;
+  margin-top: -25px;
+}

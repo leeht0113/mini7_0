@@ -32,15 +32,14 @@
  
  
 <div class="container mt-20 mb-4"></div>
- 
 <form action="chat" method="post" entype="application/x-www-form-urlencoded">
+  {% csrf_token %}
   <div class="container">
     <div class="mb-3">
       <h2><span class="badge">ChatGPT에게 요청하기</span></h2>
       <textarea class="form-control" id="question" name="question" rows="3">{{question}}</textarea>
     </div>
   </div>
- 
   <div class="container mt-4 mb-4"></div>
  
   <div class='container'>
@@ -49,9 +48,14 @@
       <textarea class="form-control" id="question" name="question" rows="3">{{result}}</textarea>
       <div class="container mt-4 mb-4"></div>
       <div class="text-center">
-      <div><button type="submit" class="btn btn-primary" id="text-button">질문</button></div>
-      </div>
+      <div><button id='text-button' class="btn btn-primary" type="button">질문</button></div>
+    </div>
     </div>
   </div>
+  <script>
+    document.getElementById("text-button").onclick = function() {
+      window.location.href = "{% url 'chatgpt:index' %}";
+  };
+  </script>
 </form>
 </body>

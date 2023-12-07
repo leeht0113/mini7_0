@@ -23,12 +23,16 @@ from django.conf.urls.static import static
 def index(request):
     return render(request,'home.html')
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 101cf9c30acf63a7c15d8b2dc3af099a3674432d
 urlpatterns = [
     path('',index),
     path('admin/', admin.site.urls),
     path('chatgpt/',include('chatgpt.urls')),
     path('signlanguagetochatgpt/',include('signlanguagetochatgpt.urls')),
-    path('login/', include('login.urls'))
+    path('login/', include('login.urls')),
 ]
 
 if settings.DEBUG:

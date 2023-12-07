@@ -1,43 +1,90 @@
 {% load static %}
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'languagechat/style.css' %}">
-<script>
-    let idNum = 0;
-    function addFile(){
-        deepCopy();
-    }
-
-    function deepCopy()  {
-      // 'test' node 선택
-      const fileModule = document.getElementById('file-module-'+idNum);
-
-
-
-      // 노드 복사하기 (deep copy)
-      const newNode = fileModule.cloneNode(true);
-
-      console.log(newNode)
-
-      // 복사된 Node id 변경하기
-      idNum++;
-      newNode.id = 'file-module-' + idNum;
+<link rel="stylesheet" href="{% static '/gtp/index.css' %}">
+<link rel="stylesheet" href="{% static '/languagechat/style.css' %}">
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">MINI7</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+ 
+     
+    <div class="container mt-20 mb-4"></div>  
+    
+    <div class="container">
+        <script>
+        let idNum = 0;
+        function addFile(){
+            deepCopy();
+        }
+    
+        function deepCopy()  {
+        // 'test' node 선택
+        const fileModule = document.getElementById('file-module-'+idNum);
+    
+    
+    
+        // 노드 복사하기 (deep copy)
+        const newNode = fileModule.cloneNode(true);
+    
+        console.log(newNode)
+    
+        // 복사된 Node id 변경하기
+        idNum++;
+        newNode.id = 'file-module-' + idNum;
         
-      // 복사한 노드 붙여넣기
-      fileModule.after(newNode);
-    }
-</script>
-{% endblock %}
-<form action="chat" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <span id="file-module-0">
-        <fieldset>
-            <legend><h1>파일 업로드</h1></legend>
-            <input name="files" type="file">
-
-        </fieldset>
-    </span>
-    <button onclick="addFile()" type="button" style="width: 100%;">파일 추가 </button>
-    <div style="width: 100%;">
-        <input type="submit" value="ChatGPT에게 수어로 문의하기" style="width: 100%;">
+        // 복사한 노드 붙여넣기
+        fileModule.after(newNode);
+        }
+    
+    </script>
+    {% endblock %}
+    
+    
+    <div>
+    <form action="chat" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <span id="file-module-0">
+            <fieldset>
+                <legend><h1>파일 업로드</h1></legend>
+                <input name="files" type="file">
+    
+            </fieldset>
+        </span>
+        <button onclick="addFile()" type="button" style="width: 100%;">파일 추가 </button>
+        <div style="width: 100%;">
+            <input type="submit" value="ChatGPT에게 수어로 문의하기" style="width: 100%;">
+        </div>
     </div>
-</form>
+    </div>
+    </form>
+ 
+ 
+</body>
+</html>
