@@ -108,6 +108,10 @@
       <label class="form-check-label" for="exampleCheck1">로그인 정보 기억하기</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+    
+    {% if not user.is_authenticated %}
+      <a href="{% url 'login:signup' %}" class="btn btn-primary">회원가입</a>
+    {% endif %}
 </form>
 
   {% block content %}
