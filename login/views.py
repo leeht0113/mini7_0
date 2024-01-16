@@ -1,7 +1,18 @@
 from django.shortcuts import render
 from openai import OpenAI
 
-client = OpenAI(api_key="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")
+api_path = './api_key.txt'
+def read_api_key(file_path=api_path):
+    try:
+        with open(file_path, 'r') as file:
+            api_key = file.read().strip()
+        return api_key
+    except FileNotFoundError:
+        print(f"파일 '{file_path}'을 찾을 수 없습니다.")
+        return None
+txt_api_key = read_api_key()
+
+client = OpenAI(api_key=txt_api_key)
 # Create your views here.
 
 from django.shortcuts import render, redirect
@@ -63,3 +74,4 @@ def chat(request):
     }
 
     return render(request, 'login/result.html', context) 
+

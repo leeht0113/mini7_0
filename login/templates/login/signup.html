@@ -1,8 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <h2>Signup Page</h2>
+
 {% extends "base.html" %}
 {% block content %}
 <div class="container my-3">
     <form method="post" action="{% url 'login:signup' %}">
         {% csrf_token %}
+        {{ form.as_p }}
         {% include "form_errors.html" %}
         <div class="mb-3">
             <label for="username">사용자 이름</label>
@@ -27,4 +38,6 @@
         <button type="submit" class="btn btn-primary">생성하기</button>
     </form>
 </div>
+</body>
+</html>
 {% endblock %}
